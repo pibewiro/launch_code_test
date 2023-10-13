@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getQuotesController = exports.quoteRepository = exports.getQuotesUseCase = void 0;
+const GetQuotesController_1 = require("../../../Controllers/QuoteControllers/GetQuotesController");
+const GetQuotesUseCase_1 = require("../../../Presentation/QuotesUseCases/GetQuotesUseCase");
+const quote_1 = require("../../../Repositories/quote");
+const quoteRepository = new quote_1.QuoteRepository();
+exports.quoteRepository = quoteRepository;
+const getQuotesUseCase = new GetQuotesUseCase_1.GetQuotesUseCase(quoteRepository);
+exports.getQuotesUseCase = getQuotesUseCase;
+const getQuotesController = new GetQuotesController_1.GetQuotesController(getQuotesUseCase);
+exports.getQuotesController = getQuotesController;

@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const contact_routes_1 = require("./contact.routes");
+const qoute_routes_1 = require("./qoute.routes");
+const router = (0, express_1.Router)();
+exports.router = router;
+router.use("/contact", contact_routes_1.ContactRouter);
+router.use("/quote", qoute_routes_1.QuoteRouter);

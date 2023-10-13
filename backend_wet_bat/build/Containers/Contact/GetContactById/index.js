@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getContactByIdController = exports.contactRepository = exports.getContactByIdUseCase = void 0;
+const GetContactByIdController_1 = require("../../../Controllers/ContactControllers/GetContactByIdController");
+const GetContactByIdUseCase_1 = require("../../../Presentation/ContactsUseCases/GetContactByIdUseCase");
+const contact_1 = require("../../../Repositories/contact");
+const contactRepository = new contact_1.ContactRepository();
+exports.contactRepository = contactRepository;
+const getContactByIdUseCase = new GetContactByIdUseCase_1.GetContactByIdUseCase(contactRepository);
+exports.getContactByIdUseCase = getContactByIdUseCase;
+const getContactByIdController = new GetContactByIdController_1.GetContactByIdController(getContactByIdUseCase);
+exports.getContactByIdController = getContactByIdController;

@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.QuoteRouter = void 0;
+const express_1 = require("express");
+const CreateQuote_1 = require("../Containers/Quote/CreateQuote");
+const GetQuotes_1 = require("../Containers/Quote/GetQuotes");
+const GetQuote_1 = require("../Containers/Quote/GetQuote");
+const QuoteRouter = (0, express_1.Router)();
+exports.QuoteRouter = QuoteRouter;
+QuoteRouter.post("/", (req, res) => CreateQuote_1.createQuoteController.handle(req, res));
+QuoteRouter.get("/", (req, res) => GetQuotes_1.getQuotesController.handle(req, res));
+QuoteRouter.get("/:id", (req, res) => GetQuote_1.getQuoteController.handle(req, res));
