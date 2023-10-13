@@ -1,0 +1,28 @@
+Backend:
+
+- cd backend_wet_bat
+- run "npm intstall to install dependencies"
+- Create a .env file in root of /backend_wet_bat and add the following variables
+  - API_PORT
+  - DATABASE_PORT
+  - DATABASE_USERNAME
+  - DATABASE_PASSWORD
+  - DATABASE_NAME
+  - DATABASE_HOST
+- run "npm run dev" to run app in dev
+
+- To build app:
+  - run "npm run build"
+  - run "npm start" to start app
+
+Frontend:
+
+- cd frontend_wet_bat
+- run "npm intstall to install dependencies"
+- Create a .env file in root of /frontend_wet_bat and add the following variables
+  - REACT_APP_API_URL
+- run "npm start" to run app in dev
+
+- To build app:
+  - run "npm run build"
+  - run "node server.js" to start app in production

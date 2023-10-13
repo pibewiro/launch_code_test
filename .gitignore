@@ -2,3 +2,5 @@ backend_wet_bat/.env
 frontend_wet_bat/.env
 backend_wet_bat/node_modules
 frontend_wet_bat/node_modules
+backend_wet_bat/build
+frontend_wet_bat/build
