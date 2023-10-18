@@ -35,7 +35,7 @@ export class HttpServer {
 
   middlewares() {
     this.app.use(express.json());
-    this.app.use(cors());
+    this.app.use(cors({ origin: process.env.FRONTEND_URL, credentials: true }));
     this.app.use(morgan("dev"));
   }
 
