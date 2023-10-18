@@ -6,7 +6,7 @@ info:
 servers:
   - url: http://localhost:4000
     description: Local server
-  - url: "https://launch-code-test-site.onrender.com"
+  - url: "https://launch-code-test.onrender.com"
     description: Development server
 paths:
   "/api/contact":

@@ -12,8 +12,11 @@ Backend:
 - run "npm run dev" to run app in dev
 
 - To build app:
+
   - run "npm run build"
   - run "npm start" to start app
+
+- Backend deploy URL: 'https://launch-code-test.onrender.com'
 
 Frontend:
 
@@ -24,5 +27,8 @@ Frontend:
 - run "npm run dev" to run app in dev
 
 - To build app:
+
   - run "npm run build"
   - run "npm start" to start app in production
+
+- Frontend deploy URL: 'https://launch-code-test-site.onrender.com'
