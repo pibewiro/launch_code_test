@@ -22,10 +22,10 @@ paths:
               properties:
                 firstName:
                   type: string
-                  example: Jone
+                  example: John
                 lastName:
                   type: string
-                  example: Dow
+                  example: Doe
                 address:
                   type: string
                   example: 12345, James St.
@@ -150,7 +150,7 @@ paths:
                   example: 4
                 contactId:
                   type: string
-                  example: "28769634-16f1-416c-9acf-6a569dbfd2d4"
+                  example: "13823d7d-4ed3-41e1-a424-08a9e2b80a76"
                 transportation:
                   type: string
                   example: "Plane"

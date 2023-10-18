@@ -8,7 +8,7 @@ export class GetQuoteUseCase {
     this._repository = repository;
   }
 
-  async execute(id: string) {
+  async execute(id: string): Promise<GetQuoteDto> {
     const data: Quotes = await this._repository.getQuoteById(id);
     const mappedData: GetQuoteDto = {
       createdAt: data.created_at.toString(),

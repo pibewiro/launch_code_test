@@ -1,4 +1,5 @@
 import { CreateContactDto } from "../../../Data/Contacts/CreateContactDtos";
+import { Contacts } from "../../../Entities/contact";
 import { IContactRepository } from "../../../Repositories/contact/IContactRepository";
 
 export class CreateContactUseCase {
@@ -7,7 +8,7 @@ export class CreateContactUseCase {
     this._repository = repository;
   }
 
-  async execute(values: CreateContactDto) {
+  async execute(values: CreateContactDto): Promise<Contacts> {
     const data = await this._repository.create({
       first_name: values.firstName,
       last_name: values.lastName,

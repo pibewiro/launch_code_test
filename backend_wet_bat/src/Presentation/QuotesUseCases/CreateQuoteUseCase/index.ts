@@ -1,4 +1,5 @@
 import { CreateQuoteDto } from "../../../Data/Quotes/CreateQuoteDtos";
+import { Quotes } from "../../../Entities/quote";
 import { IQuoteRepository } from "../../../Repositories/quote/IQuoteRepository";
 
 export class CreateQuoteUseCase {
@@ -7,7 +8,7 @@ export class CreateQuoteUseCase {
     this._repository = repository;
   }
 
-  async execute(values: CreateQuoteDto) {
+  async execute(values: CreateQuoteDto): Promise<Quotes> {
     const data = await this._repository.create({
       departure_location: values.departureLocation,
       destination_location: values.destinationLocation,

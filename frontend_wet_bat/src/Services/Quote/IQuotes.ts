@@ -24,4 +24,5 @@ export interface ICreateQuote {
   returnDate: string;
   numberTravellers: string;
   contactId: string;
+  transportation: string;
 }

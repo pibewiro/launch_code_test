@@ -4,7 +4,7 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf ./build && tsc",
+    "build": "rm -rf ./build; tsc",
     "start": "node build/server.js",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "migration:generate": "ts-node ./node_modules/typeorm/cli.js migration:create",
@@ -25,7 +25,7 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
     "ts-node": "^10.9.1",
-    "typeorm": "^0.3.16",
+    "typeorm": "^0.3.17",
     "uuid": "^9.0.0",
     "yamljs": "^0.3.0"
   },

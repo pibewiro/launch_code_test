@@ -14,7 +14,7 @@ const AppDataSource = new DataSource({
   synchronize: false,
   logging: false,
   entities: [Contacts, Quotes],
-  migrations: ["./src/Migrations/*.{ts,js}"],
+  migrations: ["./src/Infra/Database/Migrations/*.{ts,js}"],
 });
 
 export { AppDataSource };

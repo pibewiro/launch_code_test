@@ -34,7 +34,7 @@ const columns: GridColDef[] = [
     headerName: "Price",
     flex: 1,
     renderCell: (params) => (
-      <Typography>$ {params.row.price.toFixed(2)}</Typography>
+      <Typography>$ {Number(params.row.price).toFixed(2)}</Typography>
     ),
   },
 ];

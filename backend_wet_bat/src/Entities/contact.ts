@@ -13,43 +13,43 @@ import { Quotes } from "./quote";
 
 @Entity("contacts")
 class Contacts {
-  @PrimaryColumn()
+  @PrimaryColumn({ type: "uuid" })
   _id?: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   first_name: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   last_name: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   email: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   address: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   city: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   state: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   zip_code: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   phone_number: string;
 
-  @Column()
+  @Column("boolean")
   active?: boolean;
 
-  @CreateDateColumn()
+  @CreateDateColumn({ type: "timestamp with time zone" })
   created_at?: Date;
 
-  @UpdateDateColumn()
+  @UpdateDateColumn({ type: "timestamp with time zone" })
   updated_at?: Date;
 
-  @DeleteDateColumn()
+  @DeleteDateColumn({ type: "timestamp with time zone" })
   deleted_at?: Date;
 
   @OneToMany((type) => Quotes, (quotes) => quotes.contacts)

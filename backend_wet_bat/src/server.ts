@@ -1,5 +1,5 @@
-import "dotenv/config";
 import "reflect-metadata";
+import "dotenv/config";
 import "./Infra/Database";
 
 import app from "./Infra/HttpServer";

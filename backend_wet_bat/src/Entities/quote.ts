@@ -14,46 +14,46 @@ import { Contacts } from "./contact";
 
 @Entity("quotes")
 class Quotes {
-  @PrimaryColumn()
+  @PrimaryColumn({ type: "uuid" })
   _id?: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   departure_location: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   destination_location: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   depart_date: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   return_date: string;
 
-  @Column()
+  @Column({ type: "numeric" })
   number_travellers: number;
 
-  @Column()
+  @Column({ type: "varchar" })
   transportation: string;
 
-  @Column()
+  @Column({ type: "varchar" })
   status: string;
 
-  @Column()
+  @Column({ type: "boolean" })
   active: boolean;
 
-  @Column()
+  @Column({ type: "varchar" })
   contact_id: string;
 
-  @Column()
+  @Column({ type: "numeric" })
   price: number;
 
-  @CreateDateColumn()
+  @CreateDateColumn({ type: "timestamp with time zone" })
   created_at?: Date;
 
-  @UpdateDateColumn()
+  @UpdateDateColumn({ type: "timestamp with time zone" })
   updated_at?: Date;
 
-  @DeleteDateColumn()
+  @DeleteDateColumn({ type: "timestamp with time zone" })
   deleted_at?: Date;
 
   @ManyToOne((type) => Contacts, (contacts) => contacts.quotes)

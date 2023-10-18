@@ -8,7 +8,7 @@ import { Grid } from "@mui/material";
 import { ICreateQuote, IGetQuotes } from "../../Services/Quote/IQuotes";
 import { ContactContext } from "../../Services/Contact/ContactProvider";
 import { IGetContact } from "../../Services/Contact/IContact";
-const mockContactId = "28769634-16f1-416c-9acf-6a569dbfd2d4";
+const mockContactId = "13823d7d-4ed3-41e1-a424-08a9e2b80a76";
 const Home = () => {
   const initValues: ICreateQuote = {
     from: "",
@@ -18,6 +18,7 @@ const Home = () => {
     returnDate: "",
     numberTravellers: "",
     contactId: "",
+    transportation: "",
   };
   const { getQuotes, createQuote } = useContext(QuotesContext);
   const { getContact } = useContext(ContactContext);
@@ -37,6 +38,7 @@ const Home = () => {
   const [quoteForm, setQuoteForm] = useState<ICreateQuote>(initValues);
 
   const handleGetQuotes = async () => {
+    setQuotesData([]);
     const data = await getQuotes();
     setQuotesData(data);
   };
@@ -51,6 +53,8 @@ const Home = () => {
       ...quoteForm,
       contactId: mockContactId,
     });
+    setQuoteForm(initValues);
+    handleGetQuotes();
   };
 
   useEffect(() => {

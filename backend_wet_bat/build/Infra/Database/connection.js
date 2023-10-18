@@ -16,6 +16,6 @@ const AppDataSource = new typeorm_1.DataSource({
     synchronize: false,
     logging: false,
     entities: [contact_1.Contacts, quote_1.Quotes],
-    migrations: ["./src/Migrations/*.{ts,js}"],
+    migrations: ["./src/Infra/Database/Migrations/*.{ts,js}"],
 });
 exports.AppDataSource = AppDataSource;

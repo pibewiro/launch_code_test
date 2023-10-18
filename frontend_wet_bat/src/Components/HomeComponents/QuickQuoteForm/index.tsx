@@ -38,6 +38,7 @@ const QuickQuoteForm = ({ form, setForm, name, handleQuoteForm }: IProps) => {
                   label="FROM"
                   variant="filled"
                   onChange={handleForm}
+                  value={form.departureLocation}
                   InputLabelProps={{
                     shrink: true,
                   }}
@@ -50,6 +51,7 @@ const QuickQuoteForm = ({ form, setForm, name, handleQuoteForm }: IProps) => {
                   name="destinationLocation"
                   label="DESTINATION"
                   variant="filled"
+                  value={form.destinationLocation}
                   onChange={handleForm}
                   InputLabelProps={{
                     shrink: true,
@@ -63,6 +65,7 @@ const QuickQuoteForm = ({ form, setForm, name, handleQuoteForm }: IProps) => {
                   name="departDate"
                   label="DEPART DATE"
                   variant="filled"
+                  value={form.departDate}
                   onChange={handleForm}
                   InputLabelProps={{
                     shrink: true,
@@ -72,6 +75,7 @@ const QuickQuoteForm = ({ form, setForm, name, handleQuoteForm }: IProps) => {
               <Grid item xs={6}>
                 <TextField
                   fullWidth
+                  value={form.returnDate}
                   id="returnDate"
                   name="returnDate"
                   label="RETURN DATE"
@@ -85,6 +89,7 @@ const QuickQuoteForm = ({ form, setForm, name, handleQuoteForm }: IProps) => {
               <Grid item xs={6}>
                 <TextField
                   fullWidth
+                  value={form.numberTravellers}
                   id="numberTravellers"
                   name="numberTravellers"
                   label="PEOPLE"
@@ -98,6 +103,7 @@ const QuickQuoteForm = ({ form, setForm, name, handleQuoteForm }: IProps) => {
               <Grid item xs={6}>
                 <TextField
                   fullWidth
+                  value={form.transportation}
                   id="transportation"
                   name="transportation"
                   label="TRANSPORTATION"

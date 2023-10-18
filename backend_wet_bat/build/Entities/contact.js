@@ -23,55 +23,55 @@ let Contacts = class Contacts {
 };
 exports.Contacts = Contacts;
 __decorate([
-    (0, typeorm_1.PrimaryColumn)(),
+    (0, typeorm_1.PrimaryColumn)({ type: "uuid" }),
     __metadata("design:type", String)
 ], Contacts.prototype, "_id", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar" }),
     __metadata("design:type", String)
 ], Contacts.prototype, "first_name", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar" }),
     __metadata("design:type", String)
 ], Contacts.prototype, "last_name", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar" }),
     __metadata("design:type", String)
 ], Contacts.prototype, "email", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar" }),
     __metadata("design:type", String)
 ], Contacts.prototype, "address", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar" }),
     __metadata("design:type", String)
 ], Contacts.prototype, "city", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar" }),
     __metadata("design:type", String)
 ], Contacts.prototype, "state", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar" }),
     __metadata("design:type", String)
 ], Contacts.prototype, "zip_code", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)({ type: "varchar" }),
     __metadata("design:type", String)
 ], Contacts.prototype, "phone_number", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
+    (0, typeorm_1.Column)("boolean"),
     __metadata("design:type", Boolean)
 ], Contacts.prototype, "active", void 0);
 __decorate([
-    (0, typeorm_1.CreateDateColumn)(),
+    (0, typeorm_1.CreateDateColumn)({ type: "timestamp with time zone" }),
     __metadata("design:type", Date)
 ], Contacts.prototype, "created_at", void 0);
 __decorate([
-    (0, typeorm_1.UpdateDateColumn)(),
+    (0, typeorm_1.UpdateDateColumn)({ type: "timestamp with time zone" }),
     __metadata("design:type", Date)
 ], Contacts.prototype, "updated_at", void 0);
 __decorate([
-    (0, typeorm_1.DeleteDateColumn)(),
+    (0, typeorm_1.DeleteDateColumn)({ type: "timestamp with time zone" }),
     __metadata("design:type", Date)
 ], Contacts.prototype, "deleted_at", void 0);
 __decorate([

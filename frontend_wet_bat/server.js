@@ -8,5 +8,5 @@ app.use(history());
 
 app.use("/", express.static(path.join(__dirname, "build")));
 
-let port = process.env.PORT || 3001;
+let port = process.env.PORT || 3000;
 app.listen(port, () => console.log("Listening to Port:", port));

@@ -16,7 +16,7 @@ export class GetQuotesUseCase {
   email: string;
   id: string;
 
-  async execute() {
+  async execute(): Promise<GetQuoteDto[]> {
     const data: Quotes[] = await this._repository.getAll();
     const quotesData = data.map((x: Quotes) => {
       return {
