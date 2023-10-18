@@ -8,7 +8,7 @@ import { Grid } from "@mui/material";
 import { ICreateQuote, IGetQuotes } from "../../Services/Quote/IQuotes";
 import { ContactContext } from "../../Services/Contact/ContactProvider";
 import { IGetContact } from "../../Services/Contact/IContact";
-const mockContactId = "13823d7d-4ed3-41e1-a424-08a9e2b80a76";
+const mockContactId = "67f24830-c5e8-4174-aad8-80f4cb2d07b1";
 const Home = () => {
   const initValues: ICreateQuote = {
     from: "",

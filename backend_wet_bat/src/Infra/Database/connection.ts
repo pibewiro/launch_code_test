@@ -15,6 +15,9 @@ const AppDataSource = new DataSource({
   logging: false,
   entities: [Contacts, Quotes],
   migrations: ["./src/Infra/Database/Migrations/*.{ts,js}"],
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 export { AppDataSource };

@@ -5,6 +5,8 @@ info:
   description: WAT BAT Endpoints
 servers:
   - url: http://localhost:4000
+    description: Local server
+  - url: "https://launch-code-test-site.onrender.com"
     description: Development server
 paths:
   "/api/contact":
@@ -150,7 +152,7 @@ paths:
                   example: 4
                 contactId:
                   type: string
-                  example: "13823d7d-4ed3-41e1-a424-08a9e2b80a76"
+                  example: "67f24830-c5e8-4174-aad8-80f4cb2d07b1"
                 transportation:
                   type: string
                   example: "Plane"
